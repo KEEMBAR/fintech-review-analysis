@@ -1,0 +1,47 @@
+{
+    "Total_Reviews": 1953,
+    "Reviews_per_Bank": {
+        "CBE": 932,
+        "BOA": 633,
+        "Dashen": 388
+    },
+    "Average_Rating": 3.4869431643625193,
+    "Processing_Times": {
+        "VADER": 0.3719327449798584,
+        "TextBlob": 1.2743804454803467,
+        "DistilBERT": 161.65806579589844
+    },
+    "Correlation_Matrix": {
+        "vader_score": {
+            "vader_score": 1.0,
+            "textblob_score": 0.6847134177745536,
+            "distilbert_score": 0.6337356263056618
+        },
+        "textblob_score": {
+            "vader_score": 0.6847134177745536,
+            "textblob_score": 1.0,
+            "distilbert_score": 0.6146703524834725
+        },
+        "distilbert_score": {
+            "vader_score": 0.6337356263056618,
+            "textblob_score": 0.6146703524834725,
+            "distilbert_score": 1.0
+        }
+    },
+    "Sentiment_Distribution": {
+        "VADER": {
+            "positive": 0.5878136200716846,
+            "neutral": 0.20634920634920634,
+            "negative": 0.20583717357910905
+        },
+        "TextBlob": {
+            "positive": 0.558115719406042,
+            "neutral": 0.29902713773681516,
+            "negative": 0.14285714285714285
+        },
+        "DistilBERT": {
+            "positive": 0.5345622119815668,
+            "negative": 0.46543778801843316
+        }
+    }
+}

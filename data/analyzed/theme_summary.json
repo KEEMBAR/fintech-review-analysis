@@ -1,0 +1,53 @@
+{
+    "CBE": {
+        "most_common": [
+            [
+                "Transaction Performance",
+                176
+            ],
+            [
+                "Feature Requests",
+                116
+            ],
+            [
+                "Customer Support",
+                104
+            ]
+        ],
+        "total_themes": 545
+    },
+    "BOA": {
+        "most_common": [
+            [
+                "Transaction Performance",
+                121
+            ],
+            [
+                "Feature Requests",
+                110
+            ],
+            [
+                "Customer Support",
+                80
+            ]
+        ],
+        "total_themes": 405
+    },
+    "Dashen": {
+        "most_common": [
+            [
+                "Transaction Performance",
+                100
+            ],
+            [
+                "Feature Requests",
+                74
+            ],
+            [
+                "User Interface",
+                38
+            ]
+        ],
+        "total_themes": 277
+    }
+}
