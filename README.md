@@ -63,11 +63,12 @@ This task focuses on analyzing user reviews to understand sentiment and identify
 ```
 fintech-review-analysis/
 ├── data/
-│   ├── raw/              # Raw review data
-│   ├── cleaned/          # Preprocessed review data
-│   └── analyzed/         # Sentiment analysis results
-├── reports/
-│   └── themes/          # Theme analysis reports
+│   ├── raw/              # Raw review data (gitignored)
+│   ├── cleaned/          # Preprocessed review data (gitignored)
+│   └── analyzed/         # Sentiment analysis results (gitignored)
+├── notebooks/
+│   ├── sentiment_analysis.ipynb    # Jupyter notebook for sentiment analysis
+│   └── thematic_analysis.ipynb     # Jupyter notebook for theme analysis
 ├── src/
 │   ├── scraping.py       # Review scraping script
 │   ├── preprocessing.py  # Data cleaning script
@@ -97,19 +98,41 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-### Usage
+### Generating Analysis Files
 
-1. Run sentiment analysis:
+The analysis files in the `data/analyzed/` directory are generated from the Jupyter notebooks. To regenerate these files:
 
-```bash
-python src/sentiment_analysis.py
-```
-
-2. Generate theme reports:
+1. Run the sentiment analysis notebook:
 
 ```bash
-python src/theme_analysis.py
+jupyter notebook notebooks/sentiment_analysis.ipynb
 ```
+
+This will generate:
+
+- `vader_analysis.csv` and `.png`
+- `textblob_analysis.csv` and `.png`
+- `distilbert_analysis.csv` and `.png`
+- `final_sentiment_analysis.csv`
+- `correlation_heatmap.png`
+- `processing_time_comparison.png`
+- `method_comparison.csv`
+- `analysis_summary.json`
+
+2. Run the thematic analysis notebook:
+
+```bash
+jupyter notebook notebooks/thematic_analysis.ipynb
+```
+
+This will generate:
+
+- `theme_distribution.csv` and `.png`
+- `theme_percentages.csv`
+- `theme_summary.json`
+- `detailed_theme_analysis.csv`
+
+Note: The `data` directory is gitignored to keep the repository size manageable and protect sensitive information. The analysis files can be regenerated using the provided notebooks.
 
 ### Output
 
@@ -117,10 +140,13 @@ python src/theme_analysis.py
 
    - CSV files containing original reviews with sentiment scores and extracted keywords
    - Columns: review, rating, date, bank, source, sentiment_label, sentiment_score, keywords
+   - PNG files with visualizations of the analysis results
+   - JSON files with summary statistics
 
-2. Theme Reports (`reports/themes/`):
-   - Text files containing detailed theme analysis for each bank
+2. Theme Reports:
+   - CSV files with detailed theme analysis for each bank
    - Includes theme statistics, sentiment scores, and example reviews
+   - Visualizations of theme distribution and relationships
 
 ### Dependencies
 
