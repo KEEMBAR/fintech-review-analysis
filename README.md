@@ -162,3 +162,54 @@ Note: The `data` directory is gitignored to keep the repository size manageable 
 - The sentiment analysis uses DistilBERT for accurate sentiment classification
 - Theme analysis is based on predefined categories and keyword matching
 - All analysis results are logged for debugging and monitoring
+
+## Database Setup
+
+### Oracle Database Setup
+
+1. Install Oracle XE (Express Edition) on your system
+2. Create a `.env` file in the project root with the following variables:
+   ```
+   ORACLE_USERNAME=your_username
+   ORACLE_PASSWORD=your_password
+   ORACLE_DSN=localhost:1521/XEPDB1
+   ```
+
+### Loading Data
+
+To load the cleaned data into the database:
+
+```bash
+python src/load_data.py
+```
+
+### Running Analysis
+
+To generate insights and visualizations:
+
+```bash
+python src/analysis.py
+```
+
+The analysis will generate:
+
+- Sentiment trends over time
+- Rating distributions
+- Word clouds for each bank
+- Theme analysis
+- Detailed insights and recommendations
+
+All outputs will be saved in the `outputs/analysis` directory.
+
+
+
+## Task 3: Store Cleaned Data in PostgreSQL
+
+### 1. Database Setup
+
+- Ensure PostgreSQL is running.
+- Create the database and user (if not already done):
+
+```bash
+createdb fintech_db
+createuser fintech_user --pwprompt
