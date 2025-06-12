@@ -152,3 +152,8 @@ webcolors==24.8.0
 webencodings==0.5.1
 websocket-client==1.8.0
 zipp==3.20.2
+cx_Oracle==8.3.0
+python-dotenv==1.0.0
+wordcloud==1.9.3
+psycopg2-binary==2.9.9
+SQLAlchemy==2.0.27
